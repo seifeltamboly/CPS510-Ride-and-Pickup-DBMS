@@ -1,0 +1,125 @@
+.confirm-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.confirm-dialog {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  max-width: 500px;
+  width: 90%;
+  animation: slideUp 0.3s ease-out;
+}
+
+.confirm-dialog-header {
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.confirm-dialog-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.confirm-dialog-body {
+  padding: 1.5rem;
+}
+
+.confirm-dialog-message {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.confirm-dialog-footer {
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.confirm-button {
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.confirm-button-secondary {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.confirm-button-secondary:hover {
+  background-color: #d1d5db;
+}
+
+.confirm-button-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.confirm-button-danger:hover {
+  background-color: #c0392b;
+}
+
+.confirm-button-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.confirm-button-primary:hover {
+  background-color: #2980b9;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .confirm-dialog {
+    width: 95%;
+    margin: 1rem;
+  }
+
+  .confirm-dialog-footer {
+    flex-direction: column-reverse;
+  }
+
+  .confirm-button {
+    width: 100%;
+  }
+}
