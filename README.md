@@ -1,1 +1,0 @@
-# CPS510-Ride-and-Pickup-DBMS
